@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="BLEPeripheralSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oJt-8l-a45">
+                                <rect key="frame" x="0.0" y="40" width="375" height="33"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Start Advertising"/>
+                                <connections>
+                                    <action selector="startAdvertisingButtonDidTouched" destination="BYZ-38-t0r" eventType="touchUpInside" id="skg-ro-MZY"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vYf-ws-8SV">
+                                <rect key="frame" x="0.0" y="90" width="375" height="33"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Stop Advertising"/>
+                                <connections>
+                                    <action selector="stopAdvertisingButtonDidTouched" destination="BYZ-38-t0r" eventType="touchUpInside" id="n1j-o0-ARq"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ThH-dU-EXK">
+                                <rect key="frame" x="0.0" y="140" width="375" height="497"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eaS-Kp-fgW">
+                                <rect key="frame" x="281" y="637" width="94" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="9n7-mf-hEK"/>
+                                </constraints>
+                                <inset key="contentEdgeInsets" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
+                                <state key="normal" title="Delete Log"/>
+                                <connections>
+                                    <action selector="deleteLogButtonTouched" destination="BYZ-38-t0r" eventType="touchUpInside" id="3qH-kX-VGv"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ThH-dU-EXK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="0o0-I4-7ti"/>
+                            <constraint firstItem="vYf-ws-8SV" firstAttribute="top" secondItem="oJt-8l-a45" secondAttribute="bottom" constant="17" id="A08-bY-8d0"/>
+                            <constraint firstItem="oJt-8l-a45" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ACn-Jc-kJi"/>
+                            <constraint firstItem="oJt-8l-a45" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="BMQ-Ob-0sx"/>
+                            <constraint firstItem="oJt-8l-a45" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="EmU-dK-IKu"/>
+                            <constraint firstItem="eaS-Kp-fgW" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="226" id="Ndz-kH-pad"/>
+                            <constraint firstItem="eaS-Kp-fgW" firstAttribute="top" secondItem="ThH-dU-EXK" secondAttribute="bottom" id="Qas-gx-Qr4"/>
+                            <constraint firstItem="eaS-Kp-fgW" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="WKF-6V-1FW"/>
+                            <constraint firstItem="ThH-dU-EXK" firstAttribute="top" secondItem="vYf-ws-8SV" secondAttribute="bottom" constant="17" id="c06-cf-ONh"/>
+                            <constraint firstItem="vYf-ws-8SV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="jzB-hg-Sds"/>
+                            <constraint firstItem="ThH-dU-EXK" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="vSu-f7-6W1"/>
+                            <constraint firstItem="vYf-ws-8SV" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="xve-ii-S5w"/>
+                            <constraint firstItem="eaS-Kp-fgW" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="z3r-sS-nFd"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="logTextView" destination="ThH-dU-EXK" id="Log-A7-Qa0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="32.799999999999997" y="33.733133433283363"/>
+        </scene>
+    </scenes>
+</document>
